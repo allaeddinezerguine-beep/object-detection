@@ -19,9 +19,9 @@
     --success: #00e5a0;
     --warning: #ffb830;
   }
-
+ 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
   body {
     background: var(--bg);
     color: var(--text);
@@ -29,7 +29,7 @@
     min-height: 100vh;
     overflow-x: hidden;
   }
-
+ 
   /* Animated background grid */
   body::before {
     content: '';
@@ -42,7 +42,7 @@
     pointer-events: none;
     z-index: 0;
   }
-
+ 
   /* Glow orbs */
   body::after {
     content: '';
@@ -55,7 +55,7 @@
     pointer-events: none;
     z-index: 0;
   }
-
+ 
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -63,14 +63,14 @@
     position: relative;
     z-index: 1;
   }
-
+ 
   /* Header */
   header {
     padding: 40px 0 32px;
     border-bottom: 1px solid var(--border);
     margin-bottom: 40px;
   }
-
+ 
   .header-inner {
     display: flex;
     align-items: flex-end;
@@ -78,13 +78,13 @@
     flex-wrap: wrap;
     gap: 16px;
   }
-
+ 
   .logo {
     display: flex;
     align-items: center;
     gap: 16px;
   }
-
+ 
   .logo-icon {
     width: 48px;
     height: 48px;
@@ -96,7 +96,7 @@
     font-size: 22px;
     box-shadow: 0 0 30px rgba(0,212,255,0.3);
   }
-
+ 
   .logo-text h1 {
     font-size: 1.8rem;
     font-weight: 800;
@@ -106,7 +106,7 @@
     background-clip: text;
     line-height: 1;
   }
-
+ 
   .logo-text p {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.72rem;
@@ -114,7 +114,7 @@
     margin-top: 4px;
     letter-spacing: 1px;
   }
-
+ 
   .badge {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem;
@@ -125,12 +125,12 @@
     letter-spacing: 1px;
     animation: pulse-border 3s ease-in-out infinite;
   }
-
+ 
   @keyframes pulse-border {
     0%, 100% { box-shadow: 0 0 0 0 rgba(0,212,255,0); }
     50% { box-shadow: 0 0 0 4px rgba(0,212,255,0.1); }
   }
-
+ 
   /* Main layout */
   .main {
     display: grid;
@@ -138,11 +138,11 @@
     gap: 24px;
     align-items: start;
   }
-
+ 
   @media (max-width: 900px) {
     .main { grid-template-columns: 1fr; }
   }
-
+ 
   /* Panel */
   .panel {
     background: var(--surface);
@@ -152,7 +152,7 @@
     position: relative;
     overflow: hidden;
   }
-
+ 
   .panel::before {
     content: '';
     position: absolute;
@@ -161,7 +161,7 @@
     background: linear-gradient(90deg, transparent, var(--accent), transparent);
     opacity: 0.5;
   }
-
+ 
   .panel-label {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.65rem;
@@ -173,14 +173,14 @@
     align-items: center;
     gap: 8px;
   }
-
+ 
   .panel-label::after {
     content: '';
     flex: 1;
     height: 1px;
     background: var(--border);
   }
-
+ 
   /* Upload zone */
   .upload-zone {
     border: 2px dashed var(--border);
@@ -193,47 +193,47 @@
     position: relative;
     overflow: hidden;
   }
-
+ 
   .upload-zone:hover, .upload-zone.dragover {
     border-color: var(--accent);
     background: rgba(0,212,255,0.05);
     transform: translateY(-1px);
   }
-
+ 
   .upload-zone input { display: none; }
-
+ 
   .upload-icon {
     font-size: 2.5rem;
     margin-bottom: 12px;
     display: block;
     opacity: 0.7;
   }
-
+ 
   .upload-zone h3 {
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--text);
     margin-bottom: 6px;
   }
-
+ 
   .upload-zone p {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem;
     color: var(--muted);
   }
-
+ 
   /* Slider */
   .slider-group {
     margin-top: 20px;
   }
-
+ 
   .slider-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
   }
-
+ 
   .slider-header label {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.72rem;
@@ -241,14 +241,14 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
-
+ 
   .slider-val {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.85rem;
     color: var(--accent);
     font-weight: 700;
   }
-
+ 
   input[type=range] {
     width: 100%;
     -webkit-appearance: none;
@@ -258,7 +258,7 @@
     outline: none;
     cursor: pointer;
   }
-
+ 
   input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 18px;
@@ -269,11 +269,11 @@
     box-shadow: 0 0 10px rgba(0,212,255,0.5);
     transition: transform 0.2s;
   }
-
+ 
   input[type=range]::-webkit-slider-thumb:hover {
     transform: scale(1.2);
   }
-
+ 
   /* Detect button */
   .btn-detect {
     width: 100%;
@@ -292,18 +292,18 @@
     overflow: hidden;
     letter-spacing: 0.5px;
   }
-
+ 
   .btn-detect:hover:not(:disabled) {
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(0,212,255,0.3);
   }
-
+ 
   .btn-detect:disabled {
     opacity: 0.4;
     cursor: not-allowed;
     transform: none;
   }
-
+ 
   .btn-detect::after {
     content: '';
     position: absolute;
@@ -312,9 +312,9 @@
     opacity: 0;
     transition: opacity 0.3s;
   }
-
+ 
   .btn-detect:hover::after { opacity: 1; }
-
+ 
   /* Model status */
   .model-status {
     margin-top: 16px;
@@ -329,7 +329,7 @@
     gap: 8px;
     color: var(--muted);
   }
-
+ 
   .status-dot {
     width: 8px;
     height: 8px;
@@ -338,19 +338,19 @@
     flex-shrink: 0;
     transition: all 0.3s;
   }
-
+ 
   .status-dot.loading { background: var(--warning); animation: blink 1s infinite; }
   .status-dot.ready { background: var(--success); box-shadow: 0 0 8px var(--success); }
   .status-dot.error { background: #ff4757; }
-
+ 
   @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
   }
-
+ 
   /* Right panel */
   .right-panel { display: flex; flex-direction: column; gap: 24px; }
-
+ 
   /* Canvas area */
   .canvas-wrap {
     background: var(--surface2);
@@ -362,31 +362,31 @@
     align-items: center;
     justify-content: center;
   }
-
+ 
   .canvas-placeholder {
     text-align: center;
     padding: 60px 20px;
     color: var(--muted);
   }
-
+ 
   .canvas-placeholder .ph-icon {
     font-size: 3rem;
     margin-bottom: 12px;
     opacity: 0.4;
   }
-
+ 
   .canvas-placeholder p {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
     letter-spacing: 1px;
   }
-
+ 
   canvas {
     max-width: 100%;
     height: auto;
     display: block;
   }
-
+ 
   /* Loading overlay */
   .loading-overlay {
     position: absolute;
@@ -400,7 +400,7 @@
     backdrop-filter: blur(4px);
     display: none;
   }
-
+ 
   .spinner {
     width: 48px;
     height: 48px;
@@ -409,23 +409,23 @@
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
   }
-
+ 
   @keyframes spin { to { transform: rotate(360deg); } }
-
+ 
   .loading-text {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
     color: var(--accent);
     letter-spacing: 2px;
   }
-
+ 
   /* Stats row */
   .stats-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
   }
-
+ 
   .stat-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -436,9 +436,9 @@
     position: relative;
     overflow: hidden;
   }
-
+ 
   .stat-card.active { border-color: var(--accent); }
-
+ 
   .stat-card::before {
     content: '';
     position: absolute;
@@ -448,9 +448,9 @@
     transform: scaleX(0);
     transition: transform 0.5s ease;
   }
-
+ 
   .stat-card.active::before { transform: scaleX(1); }
-
+ 
   .stat-num {
     font-size: 2rem;
     font-weight: 800;
@@ -458,7 +458,7 @@
     line-height: 1;
     font-family: 'JetBrains Mono', monospace;
   }
-
+ 
   .stat-lbl {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.65rem;
@@ -467,19 +467,19 @@
     text-transform: uppercase;
     margin-top: 6px;
   }
-
+ 
   /* Results grid */
   .results-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
-
+ 
   @media (max-width: 600px) {
     .results-grid { grid-template-columns: 1fr; }
     .stats-row { grid-template-columns: repeat(3,1fr); }
   }
-
+ 
   /* Object list */
   .obj-item {
     display: flex;
@@ -493,14 +493,14 @@
     transition: border-color 0.2s;
     animation: slideIn 0.3s ease both;
   }
-
+ 
   .obj-item:hover { border-color: var(--accent); }
-
+ 
   @keyframes slideIn {
     from { opacity: 0; transform: translateX(-10px); }
     to { opacity: 1; transform: translateX(0); }
   }
-
+ 
   .obj-dot {
     width: 10px;
     height: 10px;
@@ -508,14 +508,14 @@
     flex-shrink: 0;
     margin-right: 10px;
   }
-
+ 
   .obj-name {
     font-weight: 700;
     font-size: 0.88rem;
     flex: 1;
     text-transform: capitalize;
   }
-
+ 
   .obj-badge {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.72rem;
@@ -525,13 +525,13 @@
     padding: 3px 10px;
     font-weight: 700;
   }
-
+ 
   /* Confidence bars */
   .conf-item {
     margin-bottom: 10px;
     animation: slideIn 0.3s ease both;
   }
-
+ 
   .conf-header {
     display: flex;
     justify-content: space-between;
@@ -541,16 +541,16 @@
     color: var(--muted);
     text-transform: capitalize;
   }
-
+ 
   .conf-pct { color: var(--accent); font-weight: 700; }
-
+ 
   .conf-bar-bg {
     height: 6px;
     background: var(--border);
     border-radius: 3px;
     overflow: hidden;
   }
-
+ 
   .conf-bar-fill {
     height: 100%;
     border-radius: 3px;
@@ -558,7 +558,7 @@
     transition: width 0.8s cubic-bezier(0.23, 1, 0.32, 1);
     width: 0%;
   }
-
+ 
   /* Empty state */
   .empty-state {
     text-align: center;
@@ -568,7 +568,7 @@
     font-size: 0.8rem;
     letter-spacing: 1px;
   }
-
+ 
   /* Preview thumbnail */
   .thumb-wrap {
     margin-top: 16px;
@@ -576,14 +576,14 @@
     overflow: hidden;
     display: none;
   }
-
+ 
   .thumb-wrap img {
     width: 100%;
     height: 120px;
     object-fit: cover;
     display: block;
   }
-
+ 
   .thumb-name {
     padding: 6px 10px;
     background: var(--surface2);
@@ -594,14 +594,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
+ 
   /* Images comparison */
   .images-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
   }
-
+ 
   .img-label {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.65rem;
@@ -610,7 +610,7 @@
     text-transform: uppercase;
     margin-bottom: 8px;
   }
-
+ 
   /* Scrollbar */
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: var(--surface); }
@@ -619,7 +619,7 @@
 </style>
 </head>
 <body>
-
+ 
 <div class="container">
   <header>
     <div class="header-inner">
@@ -633,25 +633,25 @@
       <div class="badge">MINI PROJECT — AI APPLIQUÉE</div>
     </div>
   </header>
-
+ 
   <div class="main">
     <!-- Left Panel -->
     <div>
       <div class="panel">
         <div class="panel-label">Input</div>
-
+ 
         <div class="upload-zone" id="uploadZone">
           <input type="file" id="fileInput" accept="image/*">
           <span class="upload-icon">📁</span>
           <h3>Drop image here</h3>
           <p>JPG · PNG · WEBP · BMP</p>
         </div>
-
+ 
         <div class="thumb-wrap" id="thumbWrap">
           <img id="thumbImg" src="" alt="">
           <div class="thumb-name" id="thumbName"></div>
         </div>
-
+ 
         <div class="slider-group">
           <div class="slider-header">
             <label>Confidence Threshold</label>
@@ -659,21 +659,21 @@
           </div>
           <input type="range" id="confSlider" min="0.05" max="0.95" step="0.05" value="0.25">
         </div>
-
+ 
         <button class="btn-detect" id="detectBtn" disabled>
           🚀 Detect Objects
         </button>
-
+ 
         <div class="model-status" id="modelStatus">
           <div class="status-dot loading" id="statusDot"></div>
           <span id="statusText">Loading YOLOv8 model...</span>
         </div>
       </div>
     </div>
-
+ 
     <!-- Right Panel -->
     <div class="right-panel">
-
+ 
       <!-- Canvas -->
       <div class="panel">
         <div class="panel-label">Detection Result</div>
@@ -698,7 +698,7 @@
           <p>UPLOAD AN IMAGE TO BEGIN</p>
         </div>
       </div>
-
+ 
       <!-- Stats -->
       <div class="stats-row" id="statsRow">
         <div class="stat-card" id="sc1">
@@ -714,7 +714,7 @@
           <div class="stat-lbl">Avg Confidence</div>
         </div>
       </div>
-
+ 
       <!-- Results -->
       <div class="results-grid">
         <div class="panel">
@@ -726,11 +726,11 @@
           <div id="confList"><div class="empty-state">NO DETECTIONS YET</div></div>
         </div>
       </div>
-
+ 
     </div>
   </div>
 </div>
-
+ 
 <script>
 // ─── COCO Classes ───────────────────────────────────────────────────────────
 const CLASSES = [
@@ -745,13 +745,13 @@ const CLASSES = [
   'remote','keyboard','cell phone','microwave','oven','toaster','sink','refrigerator',
   'book','clock','vase','scissors','teddy bear','hair drier','toothbrush'
 ];
-
+ 
 // Color per class
 function getColor(cls) {
   const h = (cls * 47) % 360;
   return `hsl(${h}, 85%, 60%)`;
 }
-
+ 
 function hexFromClass(cls) {
   const h = (cls * 47) % 360;
   const s = 0.85, l = 0.6;
@@ -764,40 +764,48 @@ function hexFromClass(cls) {
   const toHex = v => Math.round((v+m)*255).toString(16).padStart(2,'0');
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
 }
-
+ 
 // ─── State ───────────────────────────────────────────────────────────────────
 let session = null;
 let currentImage = null;
-
+ 
 // ─── Model Loading ────────────────────────────────────────────────────────────
 async function loadModel() {
-  try {
-    setStatus('loading', 'Downloading YOLOv8 model...');
-    // Use a pre-converted YOLOv8n ONNX from CDN
-    const modelUrl = 'https://huggingface.co/nicehuster/yolov8n/resolve/main/yolov8n.onnx';
-    session = await ort.InferenceSession.create(modelUrl, {
-      executionProviders: ['wasm'],
-      graphOptimizationLevel: 'all'
-    });
-    setStatus('ready', 'YOLOv8n ready — model loaded');
-    document.getElementById('detectBtn').disabled = !currentImage;
-  } catch (e) {
-    console.error(e);
-    setStatus('error', 'Failed to load model. Check connection.');
+  const modelUrls = [
+    'https://cdn.jsdelivr.net/gh/ultralytics/assets@main/yolov8n.onnx',
+    'https://huggingface.co/nicehuster/yolov8n/resolve/main/yolov8n.onnx',
+    'https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.onnx'
+  ];
+  for (let i = 0; i < modelUrls.length; i++) {
+    try {
+      setStatus('loading', `Downloading YOLOv8 model... (${i+1}/${modelUrls.length})`);
+      session = await ort.InferenceSession.create(modelUrls[i], {
+        executionProviders: ['wasm'],
+        graphOptimizationLevel: 'all'
+      });
+      setStatus('ready', 'YOLOv8n ready — model loaded');
+      document.getElementById('detectBtn').disabled = !currentImage;
+      return;
+    } catch (e) {
+      console.warn(`Model URL ${i+1} failed:`, e);
+      if (i === modelUrls.length - 1) {
+        setStatus('error', 'Failed to load model. Check connection.');
+      }
+    }
   }
 }
-
+ 
 function setStatus(state, text) {
   const dot = document.getElementById('statusDot');
   const txt = document.getElementById('statusText');
   dot.className = `status-dot ${state}`;
   txt.textContent = text;
 }
-
+ 
 // ─── Upload ───────────────────────────────────────────────────────────────────
 const uploadZone = document.getElementById('uploadZone');
 const fileInput = document.getElementById('fileInput');
-
+ 
 uploadZone.addEventListener('click', () => fileInput.click());
 uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('dragover'); });
 uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
@@ -807,26 +815,26 @@ uploadZone.addEventListener('drop', e => {
   if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
 });
 fileInput.addEventListener('change', () => { if (fileInput.files[0]) handleFile(fileInput.files[0]); });
-
+ 
 function handleFile(file) {
   const reader = new FileReader();
   reader.onload = e => {
     const img = new Image();
     img.onload = () => {
       currentImage = img;
-
+ 
       // Show thumbnail
       document.getElementById('thumbImg').src = e.target.result;
       document.getElementById('thumbName').textContent = file.name;
       document.getElementById('thumbWrap').style.display = 'block';
-
+ 
       // Show original canvas
       const origCanvas = document.getElementById('originalCanvas');
       const ctx = origCanvas.getContext('2d');
       origCanvas.width = img.width;
       origCanvas.height = img.height;
       ctx.drawImage(img, 0, 0);
-
+ 
       document.getElementById('placeholder').style.display = 'none';
       document.getElementById('imagesRow').style.display = 'grid';
       document.getElementById('detectBtn').disabled = !session;
@@ -835,38 +843,38 @@ function handleFile(file) {
   };
   reader.readAsDataURL(file);
 }
-
+ 
 // ─── Confidence slider ────────────────────────────────────────────────────────
 document.getElementById('confSlider').addEventListener('input', function() {
   document.getElementById('confVal').textContent = parseFloat(this.value).toFixed(2);
 });
-
+ 
 // ─── Detection ────────────────────────────────────────────────────────────────
 document.getElementById('detectBtn').addEventListener('click', runDetection);
-
+ 
 async function runDetection() {
   if (!session || !currentImage) return;
-
+ 
   const overlay = document.getElementById('loadingOverlay');
   overlay.style.display = 'flex';
   document.getElementById('detectBtn').disabled = true;
-
+ 
   await new Promise(r => setTimeout(r, 50));
-
+ 
   try {
     const conf = parseFloat(document.getElementById('confSlider').value);
     const inputSize = 640;
-
+ 
     // Prepare canvas
     const offCanvas = document.createElement('canvas');
     offCanvas.width = inputSize;
     offCanvas.height = inputSize;
     const ctx = offCanvas.getContext('2d');
     ctx.drawImage(currentImage, 0, 0, inputSize, inputSize);
-
+ 
     const imageData = ctx.getImageData(0, 0, inputSize, inputSize);
     const { data } = imageData;
-
+ 
     // CHW float32
     const tensor = new Float32Array(3 * inputSize * inputSize);
     for (let i = 0; i < inputSize * inputSize; i++) {
@@ -874,28 +882,28 @@ async function runDetection() {
       tensor[i + inputSize * inputSize] = data[i * 4 + 1] / 255;
       tensor[i + 2 * inputSize * inputSize] = data[i * 4 + 2] / 255;
     }
-
+ 
     const inputTensor = new ort.Tensor('float32', tensor, [1, 3, inputSize, inputSize]);
     const feeds = { images: inputTensor };
     const results = await session.run(feeds);
-
+ 
     // Parse output [1, 84, 8400]
     const output = results[Object.keys(results)[0]].data;
     const numBoxes = 8400;
     const detections = [];
-
+ 
     for (let i = 0; i < numBoxes; i++) {
       const cx = output[i];
       const cy = output[numBoxes + i];
       const w  = output[2 * numBoxes + i];
       const h  = output[3 * numBoxes + i];
-
+ 
       let maxScore = 0, maxCls = 0;
       for (let c = 0; c < 80; c++) {
         const score = output[(4 + c) * numBoxes + i];
         if (score > maxScore) { maxScore = score; maxCls = c; }
       }
-
+ 
       if (maxScore >= conf) {
         detections.push({
           x: (cx - w / 2) / inputSize * currentImage.width,
@@ -907,21 +915,21 @@ async function runDetection() {
         });
       }
     }
-
+ 
     // NMS
     const final = nms(detections, 0.45);
     drawResults(final);
     showStats(final);
-
+ 
   } catch(e) {
     console.error(e);
     setStatus('error', 'Detection failed: ' + e.message);
   }
-
+ 
   overlay.style.display = 'none';
   document.getElementById('detectBtn').disabled = false;
 }
-
+ 
 // ─── NMS ─────────────────────────────────────────────────────────────────────
 function nms(boxes, iouThresh) {
   boxes.sort((a, b) => b.score - a.score);
@@ -936,7 +944,7 @@ function nms(boxes, iouThresh) {
   }
   return keep;
 }
-
+ 
 function iou(a, b) {
   const ax2 = a.x + a.w, ay2 = a.y + a.h;
   const bx2 = b.x + b.w, by2 = b.y + b.h;
@@ -945,7 +953,7 @@ function iou(a, b) {
   const inter = ix * iy;
   return inter / (a.w*a.h + b.w*b.h - inter);
 }
-
+ 
 // ─── Draw ─────────────────────────────────────────────────────────────────────
 function drawResults(detections) {
   const canvas = document.getElementById('resultCanvas');
@@ -953,31 +961,31 @@ function drawResults(detections) {
   canvas.width = currentImage.width;
   canvas.height = currentImage.height;
   ctx.drawImage(currentImage, 0, 0);
-
+ 
   const scale = Math.max(currentImage.width, currentImage.height) / 800;
   const lw = Math.max(3, Math.round(3 * scale));
   const fs = Math.max(14, Math.round(14 * scale));
-
+ 
   detections.forEach(d => {
     const color = getColor(d.cls);
     const label = `${CLASSES[d.cls] || 'object'} ${(d.score * 100).toFixed(0)}%`;
-
+ 
     ctx.strokeStyle = color;
     ctx.lineWidth = lw;
     ctx.strokeRect(d.x, d.y, d.w, d.h);
-
+ 
     ctx.font = `bold ${fs}px 'Syne', sans-serif`;
     const tw = ctx.measureText(label).width;
     const th = fs + 8;
     const ty = d.y - th < 0 ? d.y : d.y - th;
-
+ 
     ctx.fillStyle = color;
     ctx.fillRect(d.x, ty, tw + 12, th);
     ctx.fillStyle = '#fff';
     ctx.fillText(label, d.x + 6, ty + fs - 1);
   });
 }
-
+ 
 // ─── Stats & Lists ────────────────────────────────────────────────────────────
 function showStats(detections) {
   const counts = {};
@@ -985,17 +993,17 @@ function showStats(detections) {
     const name = CLASSES[d.cls] || 'object';
     counts[name] = (counts[name] || 0) + 1;
   });
-
+ 
   const avgConf = detections.length
     ? detections.reduce((s, d) => s + d.score, 0) / detections.length
     : 0;
-
+ 
   // Stat cards
   document.getElementById('statFound').textContent = detections.length;
   document.getElementById('statClasses').textContent = Object.keys(counts).length;
   document.getElementById('statConf').textContent = detections.length ? (avgConf * 100).toFixed(0) + '%' : '—';
   ['sc1','sc2','sc3'].forEach(id => document.getElementById(id).classList.add('active'));
-
+ 
   // Class list
   const classList = document.getElementById('classList');
   if (detections.length === 0) {
@@ -1013,7 +1021,7 @@ function showStats(detections) {
         </div>`;
       }).join('');
   }
-
+ 
   // Confidence list
   const confList = document.getElementById('confList');
   if (detections.length === 0) {
@@ -1037,9 +1045,10 @@ function showStats(detections) {
       }).join('');
   }
 }
-
+ 
 // ─── Init ─────────────────────────────────────────────────────────────────────
 loadModel();
 </script>
 </body>
 </html>
+ 
